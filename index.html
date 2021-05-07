@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="/script.js"></script>
+        <script src="/stats.js"></script>
+        <script src="/words.js"></script>
+        <link href="/style.css" rel="stylesheet">
+        <title>TypeComp</title>
+    </head>
+    <body class="bg-dark">
+        <h1 class="text-center text-primary">TypeComp</h1>
+        <div class="container">
+            <div id="timer" class="timer text-warning text-center" style="font-size: x-large;"></div>
+            <script>
+                $("#timer").text(timer+"")
+            </script>
+            <div class="d-flex justify-content-center">
+                <span id="live-wpm" class="text-warning"></span>
+            </div>
+            <a class="btn btn-warning" href="">Restart</a>
+            <p class="text-center"><a href="/stats.html">See your stats</a></p>
+            <div class="texts">
+                <div id="placeholder-text"></div>
+                <div id="user-text">
+                    <span id="type-text">
+
+                    </span>
+                    <span>
+                        <input width="10" type="text" id="text-input" class="" placeholder="" style="border: none; outline: none; background: transparent;">
+                    </span>
+                </div>
+            </div>
+            <script>
+                $.each(words, function (index, word) { 
+                    $("#placeholder-text").append(`<span class="text-black-50">${word}</span> `)
+                });
+            </script>
+        </div>
+    </body>
+</html>

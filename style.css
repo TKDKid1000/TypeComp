@@ -1,0 +1,15 @@
+.texts {
+    position: relative;
+}
+
+.texts>#user-text {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.texts>#placeholder-text {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
