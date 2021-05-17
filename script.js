@@ -11,7 +11,7 @@ function shuffleArray(array) {
 var wordindex = 0;
 var timer = "Ready?";
 var currentTime = timer;
-var initialTime = 10;
+var initialTime = 30;
 var mistakes = 0;
 $(document).ready(function() {
     $("#text-input").on("input", function () {
