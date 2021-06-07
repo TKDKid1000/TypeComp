@@ -70,10 +70,11 @@ function end() {
     var stats = JSON.parse(window.localStorage.getItem("wpm-stats"))
     
     if (stats[wordindex/(initialTime/60)] !== undefined) {
+        console.log(stats[wordindex/(initialTime/60)])
         stats[wordindex/(initialTime/60)]["mistakes"] = stats[wordindex/(initialTime/60)]["mistakes"]+mistakes
         stats[wordindex/(initialTime/60)]["count"] = stats[wordindex/(initialTime/60)]+1
     } else {
-        stats[wordindex/(initialTime/60)] = {"mistakes": Object(mistakes), "count": Object(1)}
+        stats[wordindex/(initialTime/60)] = {"mistakes": Object(mistakes), "count": 1}
     }
     console.log(JSON.stringify(stats))
     window.localStorage.setItem("wpm-stats", JSON.stringify(stats))
